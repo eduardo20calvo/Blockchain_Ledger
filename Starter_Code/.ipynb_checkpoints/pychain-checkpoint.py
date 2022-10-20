@@ -72,8 +72,7 @@ class Block:
 
     # @TODO
     # Rename the `data` attribute to `record`, and set the data type to `Record`
-    data: Any
-
+    record: Record
     creator_id: int
     prev_hash: str = "0"
     timestamp: str = datetime.datetime.utcnow().strftime("%H:%M:%S")
@@ -117,7 +116,7 @@ class PyChain:
 
             calculated_hash = block.hash_block()
 
-        print("Wining Hash", calculated_hash)
+        print("Winning Hash", calculated_hash)
         return block
 
     def add_block(self, candidate_block):
